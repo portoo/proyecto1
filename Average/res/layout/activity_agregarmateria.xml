@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_creation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.mobile.average.Operation"
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        android:id="@+id/BTaceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/holo_red_dark"
+        android:text="@string/aceptar"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/materia_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textCapSentences" >
+
+        <requestFocus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/labelagregar"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/Nnotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/materia_name"
+        android:layout_marginTop="30dp"
+        android:text="@string/labelNnotas"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/Nnotas"
+        android:text="@string/creditos"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:id="@+id/scrollobj"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/BTaceptar"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="15dp" >
+		<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical" >
+
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" >
+
+				<TextView
+				    android:id="@+id/staticname"
+				    android:layout_width="0dp"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="0.8"
+				    android:paddingLeft="10dp"
+				    android:text="@string/HeaderNota"
+				    android:textSize="18sp" />
+
+				<TextView
+				    android:id="@+id/staticnota"
+				    android:layout_width="0dp"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="0.2"
+				    android:gravity="center_horizontal"
+				    android:text="@string/HeaderPer"
+				    android:textSize="18sp" />
+
+			</LinearLayout>
+
+        	<LinearLayout
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:baselineAligned="false"
+            	android:orientation="horizontal" >
+
+            	<LinearLayout
+                	android:id="@+id/inputcontainer1"
+                	android:layout_width="0dp"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="0.8"
+                	android:orientation="vertical" >
+            	</LinearLayout>
+
+            	<LinearLayout
+                	android:id="@+id/inputcontainer2"
+                	android:layout_width="0dp"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="0.2"
+                	android:orientation="vertical" >
+            	</LinearLayout>
+        	</LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/ETCreditos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Nnotas"
+        android:layout_toRightOf="@+id/textView3"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+</RelativeLayout>
